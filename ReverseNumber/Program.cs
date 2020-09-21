@@ -8,14 +8,26 @@ namespace ReverseNumber
 {
     class Program
     {
-        static void Main(string[] args)
+        public class reverseNumber
         {
-            // The code provided will print ‘Hello World’ to the console.
-            // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
-
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
+            public long reverse(long num)
+            {
+                long temp = 0;
+                while (num != 0)
+                {
+                    temp = (temp * 10) + (num % 10);
+                    num = num / 10;
+                }
+                return temp;
+            }
         }
+            static int Main(string[] args)
+        {
+                long n = 654312;
+                reverseNumber inp = new reverseNumber();
+                Console.WriteLine("Given number is" + n);
+                Console.WriteLine("Reverse of given number is " + inp.reverse(n));
+            return 0;
+         }
     }
 }
