@@ -1,12 +1,8 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ReverseNumber
 {
-    class Program
+    internal class Program
     {
         public class reverseNumber
         {
@@ -21,13 +17,14 @@ namespace ReverseNumber
                 return temp;
             }
         }
-            static int Main(string[] args)
+
+        private static void Main(string[] args)
         {
-                long n = 654312;
-                reverseNumber inp = new reverseNumber();
-                Console.WriteLine("Given number is" + n);
-                Console.WriteLine("Reverse of given number is " + inp.reverse(n));
-            return 0;
-         }
+            long n = 654312;
+            reverseNumber inp = new reverseNumber();
+            Console.WriteLine("Given number is" + n);
+            Console.WriteLine("Reverse of given number is " + inp.reverse(n));
+            Console.ReadLine();
+        }
     }
 }
